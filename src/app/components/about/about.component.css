@@ -1,0 +1,19 @@
+.jumbotron {
+  height: 85vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+.row > .col-12 > img {
+  width: 60%;
+  height: 100%;
+  margin-left: 20%;
+}
+
+.row > .col-12 > p {
+  text-align: justify;
+  font-size: 20px;
+  color: #fff;
+}

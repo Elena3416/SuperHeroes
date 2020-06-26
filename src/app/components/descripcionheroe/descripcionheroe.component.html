@@ -1,0 +1,45 @@
+<div class="loading" *ngIf="loading"></div>
+<div class="container" *ngIf="!loading">
+    <div class="jumbotron mt-3">
+      <div class="row">
+        <div class="col-12">
+          <h3>{{currentHeroe.name}}</h3>
+        </div>
+      </div>
+        <div class="row">
+            <div class="col-6">
+              <div class="list-group" id="list-tab" role="tablist" >
+                <img [src]="currentHeroe.image" alt="heroe">
+                <p class="mt-4 titulo">Ocupación</p>
+                <p class="parrafo">{{currentHeroe.work}}</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <p class="titulo">PowerStats</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" [ngStyle]="{width:currentHeroe.intelligence + '%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.intelligence}}</div>
+              </div>
+              <p>Strength</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{width:currentHeroe.strength + '%'}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.strength}}</div>
+              </div>
+              <p>Speed</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [ngStyle]="{width:currentHeroe.speed + '%'}" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.speed}}</div>
+              </div>
+              <p>Durability</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"  [ngStyle]="{width:currentHeroe.durability + '%'}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.durability}}</div>
+              </div>
+              <p>Power</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  [ngStyle]="{width:currentHeroe.power + '%'}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.power}}</div>
+              </div>
+              <p>Combat</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar"  [ngStyle]="{width:currentHeroe.combat + '%'}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{currentHeroe.combat}}</div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

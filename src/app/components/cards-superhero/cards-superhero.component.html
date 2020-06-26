@@ -1,0 +1,45 @@
+<div class="loading" *ngIf="loading"></div>
+<div class="cuadros" *ngIf="!loading">
+  <div
+    class="card mt-3 ml-3"
+    style="width: 18rem;"
+    *ngFor="let heroes of ArrayHeroes"
+  >
+    <p class="mt-2">{{ heroes.name }}</p>
+    <img [src]="heroes.image" class="card-img-top imagen" alt="..." />
+    <div class="card-body">
+      <button
+        type="button"
+        (click)="IraDescripcionHeroe(heroes.id)"
+        class="btn btn-primary boton"
+      >
+        Ver Más....
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="row">
+    <div class="col-4">
+      <img
+        [src]="ArrowLeft"
+        alt="arrowleft"
+        (click)="left()"
+        *ngIf="IndicePaginacion != 1"
+        class="imagen"
+      />
+    </div>
+    <div class="col-4">
+      <p>{{ IndicePaginacion }}</p>
+    </div>
+    <div class="col-4">
+      <img
+        [src]="ArrowRight"
+        alt="arrowRight"
+        (click)="right()"
+        class="imagen"
+      />
+    </div>
+  </div>
+</div>

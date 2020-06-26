@@ -1,0 +1,41 @@
+.row > .col-12 > h3{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-top: -5%;
+}
+
+.list-group > img{
+    width: 50%; 
+    height: 40%;
+    margin-left: 20%;
+} 
+
+.jumbotron{
+    width: 100%;
+    height: 80vh;
+}
+
+.progress{
+    height: 5%;
+    font-size: 15px;
+    border-radius: 2%;
+    position: relative;
+}
+
+p{
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.titulo{
+ margin-left: 30%;   
+ text-transform: uppercase;
+}
+
+.parrafo{
+    width: 80%;
+    margin-left: 5%;
+    text-align:justify;
+}

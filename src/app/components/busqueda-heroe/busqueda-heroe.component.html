@@ -1,0 +1,47 @@
+<div class="container mt-3">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-12">
+        <span><i></i></span>
+        <img (click)="RegresaraCards()" [src]="Imageback" alt="back" />
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <h3>BÚSQUEDA DE TU HEROE FAVORITO</h3>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="form-group">
+          <input
+            style="font-size: 20px;"
+            #inputSearch
+            type="text"
+            placeholder="Busca tu heroe"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="loading" *ngIf="loading"></div>
+        <div class="card-columns" *ngIf="MostrarTarjeta">
+        <div class="card" *ngIf="loading">
+          <img class="card-img-top" [src]="HeroeRecibido.image" alt="image" />
+            <div class="card-body">
+              <h4 class="card-title">{{ HeroeRecibido.name }}</h4>
+            </div>
+            <button
+              (click)="IraDescripcionHeroe(HeroeRecibido.id)"
+              class="btn btn-primary btn-block"
+            >
+              Ver mas...
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
